@@ -6,10 +6,12 @@ export default function DetallesScreen({ route }) {
   const { character } = route.params;
   const [fav, setFav] = useState(false);
 
+  //Preguntamos al almacenamiento si ese personaje esta en favoritos
   useEffect(() => {
     (async () => setFav(await isFavorite(character.id)))();
   }, [character.id]);
 
+  // Agrega o quita un personaje de favoritos
   const onToggle = async () => {
     const nowFav = await toggleFavorite(character);
     setFav(nowFav);

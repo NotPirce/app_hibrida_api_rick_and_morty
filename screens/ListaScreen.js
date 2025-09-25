@@ -19,6 +19,7 @@ import {
 } from "../storage/favoritos";
 
 const API = "https://rickandmortyapi.com/api";
+// Lista de filtros que soporta la API
 const STATUSES = ["alive", "dead", "unknown"];
 const GENDERS = ["female", "male", "genderless", "unknown"];
 
@@ -289,3 +290,5 @@ export default function ListScreen({ navigation }) {
     </View>
   );
 }
+
+
